@@ -6,42 +6,69 @@ html {
   color: white;
 }
 .container {
-  max-width: 960px;
+  width: auto;
   margin: auto;
 }
-body {
-  min-width: 960px;
+.center {
+  width: 960px;
+  margin: auto;
 }
 /* Begin top of page formatting */
 .header {
   background-color: black;
-  background-size: cover;
   color: white;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
   font-size: 1rem;
   padding: 0.66rem;
+  display: flex;
+  align-items: center;
 }
 .header img {
   height: 1.5rem;
   padding: 0 1rem 0 .5rem;
+  display: inline;
+}
+.header h4 {
+  display: inline;
+  padding-bottom: 0.66rem;
 }
 .banner {
   background-image: url("../../resources/images/moto.jpeg");
   background-size: cover;
   height: 25rem;
-
 }
-nav {
+.spacer {
+  width: 960px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.overlay {
+  background-color: black;
+  width: 20rem;
+  margin-top: 9rem;
+  padding: 2rem 3rem;
+}
+.overlay p {
+  font-size: 1rem;
+  font-weight: bold;
+  padding-bottom: 0.25rem;
+}
+.overlay h1  {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.nav-bar {
   background-color: firebrick;
   background-size: cover;
 }
 ul {
   list-style: none;
+  display: flex;
+  justify-content: space-between;
 }
 li {
   display: inline-block;
+  padding: 0.75rem;
 }
 /* Begin Product Listings formatting */
 .shopping {
@@ -58,18 +85,41 @@ li {
 .product img {
   height: 9rem;
   margin: 2rem auto;
+  display: flex;
+  justify-content: center;
 }
 .product p {
   text-align: center;
   background-color: black;
   background-size: cover;
 }
-.box p {
-  background color: black;
-  color: white;
+#title {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
-.box h5 {
-
+#glasses {
+  height: 5.5rem;
+  margin: 3.75rem auto;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+}
+.box {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  padding: 0.5rem;
+}
+.info p {
+  color: white;
+  padding: 1rem 2rem;
+  min-width: 35%;
+  background-color: black;
+}
+h5 {
+  padding-bottom: 4rem;
+  color: black;
 }
 /* Begin footer formatting */
 footer {
@@ -79,4 +129,78 @@ footer {
   text-align: left;
   display: flex;
   align-items: center;
+}
+/* Begin Responsive Media Queries */
+@media only screen and (max-width: 1024px) {
+  .header h4 {
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+  nav {
+    display: none;
+  }
+  .menu {
+    text-align: center;
+    padding: 1rem;
+  }
+  .glass {
+    display: none;
+  }
+  .product {
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 470px) {
+  .header h4 {
+    font-size: 1rem;
+}
+  .center {
+    width: 470px;
+    margin: auto;
+  }
+  .banner {
+    height: 15rem;
+    padding-bottom: 0.5rem;
+  }
+  .spacer {
+    width: 460px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .overlay {
+    width: 100%;
+    margin-top: 10rem;
+    padding-bottom: 0.5rem;
+  }
+  .overlay p {
+    font-size: 0.77rem;
+    font-weight: bold;
+    padding-bottom: 0.25rem;
+  }
+  .overlay h1  {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-bottom: 0.5rem;
+  }
+  .watch {
+    display: none;
+  }
+  .product {
+    width: 90%;
+  }
+  .info {
+    display: flex;
+    flex-direction: column;
+  }
+  .box {
+    width: 90%;
+  }
+  footer {
+    text-align: center;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .menu {
+    display: none;
 }
